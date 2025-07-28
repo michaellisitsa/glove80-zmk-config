@@ -136,12 +136,12 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans            &trans             &trans                &trans                 &trans                                                                                                              &trans         &trans       &trans      &trans      &trans
+&kp GRAVE         &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COMMA         &kp PERIOD                                                                     &trans             &trans         &trans       &trans      &trans      &trans
+&kp LEFT_BRACKET  &kp EXCLAMATION    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON     &kp QUESTION                                                                   &kp GRAVE          &trans         &trans       &trans      &trans      &trans
+&kp POUND         &kp CARET          &kp EQUAL             &kp UNDERSCORE         &kp DOLLAR        &kp ASTERISK                                                                   &kp DOUBLE_QUOTES  &kp BACKSPACE  &kp TAB      &kp SPACE   &kp ENTER   &trans
+&kp TILDE         &kp LESS_THAN      &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp SLASH     &kp BACKSLASH  &kp PERIOD  &kp ASTERISK  &trans  &trans  &trans  &kp SQT            &kp DEL        &kp LS(TAB)  &kp INSERT  &kp ESCAPE  &trans
+&trans            &kp AMPERSAND      &kp SQT               &kp DOUBLE_QUOTES      &kp PLUS                        &kp PERCENT    &kp COLON   &kp AT_SIGN   &trans  &trans  &trans                     &trans         &trans       &trans      &trans      &trans
             >;
         };
     };
