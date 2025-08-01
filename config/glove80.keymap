@@ -162,7 +162,7 @@
             >;
         };
 
-        layer_4 {
+        symbol_layer {
             bindings = <
 &trans            &trans             &trans                &trans                 &trans                                                                                                              &trans         &trans       &trans      &trans      &trans
 &kp GRAVE         &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COMMA         &kp PERIOD                                                                     &trans             &trans         &trans       &trans      &trans      &trans
@@ -173,7 +173,7 @@
             >;
         };
 
-        layer_5 {
+        number_layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                                                                           &trans           &trans           &trans           &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                           &trans  &trans           &trans           &trans           &trans  &trans
