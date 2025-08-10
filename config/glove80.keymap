@@ -21,9 +21,10 @@
 
 // Global settings, taken from urob config
 // https://github.com/urob/zmk-config/blob/784d3ea9351425e9cc11adc45ca34825546e2e99/config/base.keymap#L31
+
 &sk {
-  release-after-ms = <900>;
-  quick-release;
+    release-after-ms = <900>;
+    quick-release;
 };
 
 / {
@@ -74,6 +75,15 @@
             flavor = "balanced";
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 64 65 66 67 68 2 3 4>;
+        };
+
+        magic_shift: magic_shift {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MAGIC_SHIFT";
+            bindings = <&sk LSHFT>, <&caps_word>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
         };
     };
 
@@ -139,12 +149,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | ESC   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1      &kp F2           &kp F3       &kp F4             &kp F5                                                                                                  &kp F6        &kp F7              &kp F8       &kp F9                    &kp F10
-&kp EQUAL   &kp N1           &kp N2       &kp N3             &kp N4        &kp N5                                                                            &kp N6  &kp N7        &kp N8              &kp N9       &kp N0                    &kp MINUS
-&kp TAB     &kp Q            &kp W        &kp E              &kp R         &kp T                                                                             &kp Y   &kp U         &kp I               &kp O        &kp P                     &kp BSLH
-&kp ESC     &hml LEFT_GUI A  &hml LALT S  &hml LEFT_SHIFT D  &hml LCTRL F  &kp G                                                                             &kp H   &hmr RCTRL J  &hmr RIGHT_SHIFT K  &hmr RALT L  &hmr RIGHT_GUI SEMICOLON  &kp SQT
-&kp GRAVE   &kp Z            &kp X        &kp C              &kp V         &kp B   &kp LSHFT        &kp LGUI   &layer_td  &kp DELETE  &kp RGUI  &kp RSHFT    &kp N   &kp M         &kp COMMA           &kp DOT      &kp FSLH                  &kp PG_UP
-&magic 2 0  &kp HOME         &kp END      &kp LEFT           &kp RIGHT             &lt 5 BACKSPACE  &sk LSHFT  &kp LALT   &kp RALT    &kp RET   &lt 4 SPACE          &kp UP        &kp DOWN            &kp LBKT     &kp RBKT                  &kp PG_DN
+&kp F1      &kp F2           &kp F3       &kp F4             &kp F5                                                                                                     &kp F6        &kp F7              &kp F8       &kp F9                    &kp F10
+&kp EQUAL   &kp N1           &kp N2       &kp N3             &kp N4        &kp N5                                                                               &kp N6  &kp N7        &kp N8              &kp N9       &kp N0                    &kp MINUS
+&kp TAB     &kp Q            &kp W        &kp E              &kp R         &kp T                                                                                &kp Y   &kp U         &kp I               &kp O        &kp P                     &kp BSLH
+&kp ESC     &hml LEFT_GUI A  &hml LALT S  &hml LEFT_SHIFT D  &hml LCTRL F  &kp G                                                                                &kp H   &hmr RCTRL J  &hmr RIGHT_SHIFT K  &hmr RALT L  &hmr RIGHT_GUI SEMICOLON  &kp SQT
+&kp GRAVE   &kp Z            &kp X        &kp C              &kp V         &kp B   &kp LSHFT        &kp LGUI      &layer_td  &kp DELETE  &kp RGUI  &kp RSHFT    &kp N   &kp M         &kp COMMA           &kp DOT      &kp FSLH                  &kp PG_UP
+&magic 2 0  &kp HOME         &kp END      &kp LEFT           &kp RIGHT             &lt 5 BACKSPACE  &magic_shift  &kp LALT   &kp RALT    &kp RET   &lt 4 SPACE          &kp UP        &kp DOWN            &kp LBKT     &kp RBKT                  &kp PG_DN
             >;
         };
 
