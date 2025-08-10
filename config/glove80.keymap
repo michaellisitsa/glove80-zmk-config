@@ -83,7 +83,7 @@
             bindings = <&sk LSHFT>, <&caps_word>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
     };
 
