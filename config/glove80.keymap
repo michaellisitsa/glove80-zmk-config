@@ -130,8 +130,7 @@
         EscapeCombo {
             bindings = <&kp ESCAPE>;
             key-positions = <41 42>;
-            timeout-ms = <18>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <30>;
             layers = <0>;
         };
     };
