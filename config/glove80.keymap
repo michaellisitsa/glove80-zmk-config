@@ -27,6 +27,8 @@
     quick-release;
 };
 
+&lt { quick-tap-ms = <150>; };
+
 / {
     behaviors {
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
@@ -85,6 +87,49 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
+
+        vim_dd_taps: vim_dd_taps {
+            compatible = "zmk,behavior-tap-dance";
+            label = "VIM_DD_TAPS";
+            #binding-cells = <0>;
+            bindings = <&none>, <&vim_dd>;
+        };
+
+        vim_o_O: vim_o_O {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_O_O";
+            bindings = <&vim_o>, <&vim_O>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        vim_ctl_w: vim_ctl_w {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_CTL_W";
+            bindings = <&kp LA(RIGHT)>, <&kp LA(BACKSPACE)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL)>;
+        };
+
+        vim_ctl_u: vim_ctl_u {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_CTL_U";
+            bindings = <&kp RG(Z)>, <&kp LG(BACKSPACE)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        vim_r: vim_r {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_R";
+            bindings = <&none>, <&kp RG(RS(Z))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL)>;
+        };
     };
 
     macros {
@@ -122,6 +167,41 @@
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 3>;
         };
+
+        vim_a: vim_a {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &kp RIGHT>;
+            label = "VIM_A";
+        };
+
+        vim_o: vim_o {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(RIGHT) &kp LS(ENTER)>;
+            label = "VIM_O";
+        };
+
+        vim_e: vim_e {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(RIGHT) &kp LEFT_ARROW>;
+            label = "VIM_E";
+        };
+
+        vim_dd: vim_dd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(RIGHT) &kp LG(BACKSPACE)>;
+            label = "VIM_DD";
+        };
+
+        vim_O: vim_O {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LEFT) &kp LS(ENTER)>;
+            label = "VIM_O";
+        };
     };
 
     combos {
@@ -132,6 +212,11 @@
             key-positions = <41 42>;
             timeout-ms = <30>;
             layers = <0>;
+        };
+
+        to_nav_layer {
+            bindings = <&to 6>;
+            key-positions = <38 37>;
         };
     };
 
@@ -209,6 +294,17 @@
 &trans  &kp LGUI  &kp LALT  &kp LSHIFT  &kp LCTRL  &trans                                                           &kp K      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
 &trans  &trans    &trans    &trans      &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans           &kp J      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
 &trans  &trans    &trans    &trans      &trans             &trans  &trans  &trans  &trans  &trans  &kp KP_NUMBER_0             &trans           &trans           &trans           &trans  &trans
+            >;
+        };
+
+        layer_nav {
+            bindings = <
+&none  &none     &none       &none       &none                                                                                               &none            &none   &none      &none      &none
+&none  &none     &none       &none       &none      &none                                                                        &none       &none            &none   &none      &none      &none
+&none  &none     &vim_ctl_w  &vim_e      &vim_r     &none                                                                        &vim_ctl_u  &kp RC(Z)        &to 0   &vim_o_O   &kp RG(V)  &none
+&none  &kp LGUI  &kp LALT    &kp LSHIFT  &kp LCTRL  &none                                                                        &kp LEFT    &hmr RCTRL DOWN  &kp UP  &kp RIGHT  &none      &none
+&none  &none     &kp DELETE  &none       &none      &kp LA(LEFT_ARROW)  &none          &none         &none  &none  &none  &none  &none       &none            &none   &none      &none      &none
+&none  &none     &none       &none       &none                          &kp BACKSPACE  &magic_shift  &none  &none  &none  &none              &none            &none   &none      &none      &none
             >;
         };
     };
