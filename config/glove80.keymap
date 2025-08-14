@@ -98,7 +98,7 @@
         vim_o_O: vim_o_O {
             compatible = "zmk,behavior-mod-morph";
             label = "VIM_O_O";
-            bindings = <&vim_o>, <&vim_O>;
+            bindings = <&vim_o>, <&vim_shft_o>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -196,11 +196,11 @@
             label = "VIM_DD";
         };
 
-        vim_O: vim_O {
+        vim_shft_o: vim_shft_o {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(LEFT) &kp LS(ENTER)>;
-            label = "VIM_O";
+            label = "VIM_SHFT_O";
         };
     };
 
