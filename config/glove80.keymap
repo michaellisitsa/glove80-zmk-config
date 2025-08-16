@@ -130,6 +130,15 @@
             #binding-cells = <0>;
             mods = <(MOD_RCTL)>;
         };
+
+        vim_ctl_h: vim_ctl_h {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_CTL_H";
+            bindings = <&kp LEFT>, <&kp H>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
     };
 
     macros {
@@ -299,12 +308,12 @@
 
         layer_nav {
             bindings = <
-&none  &none     &none       &none       &none                                                                                               &none            &none   &none      &none      &none
-&none  &none     &none       &none       &none      &none                                                                        &none       &none            &none   &none      &none      &none
-&none  &none     &vim_ctl_w  &vim_e      &vim_r     &none                                                                        &vim_ctl_u  &kp RC(Z)        &to 0   &vim_o_O   &kp RG(V)  &none
-&none  &kp LGUI  &kp LALT    &kp LSHIFT  &kp LCTRL  &none                                                                        &kp LEFT    &hmr RCTRL DOWN  &kp UP  &kp RIGHT  &none      &none
-&none  &none     &kp DELETE  &none       &none      &kp LA(LEFT_ARROW)  &none          &none         &none  &none  &none  &none  &none       &none            &none   &none      &none      &none
-&none  &none     &none       &none       &none                          &kp BACKSPACE  &magic_shift  &none  &none  &none  &none              &none            &none   &none      &none      &none
+&none  &none     &none       &none       &none                                                                                               &none            &none          &none                 &none      &none
+&none  &none     &none       &none       &none      &none                                                                        &none       &none            &none          &none                 &none      &none
+&none  &none     &vim_ctl_w  &none       &vim_r     &none                                                                        &kp RG(C)   &vim_ctl_u       &to 0          &vim_o_O              &kp RG(V)  &none
+&none  &kp LGUI  &kp LALT    &kp LSHIFT  &kp LCTRL  &none                                                                        &vim_ctl_h  &hmr RCTRL DOWN  &hmr RSHFT UP  &hmr RIGHT_ALT RIGHT  &kp RGUI   &none
+&none  &none     &kp DELETE  &none       &none      &kp LA(LEFT_ARROW)  &none          &none         &none  &none  &none  &none  &none       &none            &none          &none                 &none      &none
+&none  &none     &none       &none       &none                          &kp BACKSPACE  &magic_shift  &none  &none  &none  &none              &none            &none          &none                 &none      &none
             >;
         };
     };
