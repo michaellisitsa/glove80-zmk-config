@@ -310,8 +310,8 @@
             bindings = <
 &trans  &trans                &trans          &trans           &trans                                                                                                         &trans         &trans       &trans       &trans         &trans
 &none   &none                 &none           &none            &none                  &none                                                                &trans             &trans         &trans       &trans       &trans         &trans
-&none   &kp EXCLAMATION       &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp SEMICOLON          &kp QUESTION                                                         &kp GRAVE          &kp AMPERSAND  &kp HASH     &kp AT_SIGN  &none          &trans
-&none   &kp CARET             &kp EQUAL       &kp UNDERSCORE   &kp DOLLAR             &kp ASTERISK                                                         &kp DOUBLE_QUOTES  &kp BACKSPACE  &kp TAB      &kp SPACE    &kp BACKSLASH  &trans
+&none   &kp EXCLAMATION       &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp SEMICOLON          &kp QUESTION                                                         &kp GRAVE          &kp AMPERSAND  &kp HASH     &kp AT_SIGN  &kp BACKSLASH  &trans
+&none   &kp CARET             &kp EQUAL       &kp UNDERSCORE   &kp DOLLAR             &kp ASTERISK                                                         &kp DOUBLE_QUOTES  &kp BACKSPACE  &kp TAB      &kp SPACE    &kp PLUS       &trans
 &none   &kp LEFT_PARENTHESIS  &kp PIPE        &kp MINUS        &kp RIGHT_PARENTHESIS  &kp SLASH     &none        &none      &none  &trans  &trans  &trans  &kp SQT            &kp DEL        &kp LS(TAB)  &kp TILDE    &none          &trans
 &trans  &none                 &none           &none            &none                                &kp PERCENT  &kp COLON  &none  &trans  &trans  &trans                     &trans         &trans       &trans       &trans         &trans
             >;
@@ -319,12 +319,12 @@
 
         number_layer {
             bindings = <
-&trans  &trans    &trans    &trans      &trans                                                                                 &trans           &trans           &trans           &trans        &trans
-&trans  &trans    &trans    &trans      &trans     &trans                                                           &trans     &trans           &trans           &trans           &trans        &trans
-&trans  &trans    &trans    &trans      &trans     &trans                                                           &kp LS(G)  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &trans
-&trans  &kp LGUI  &kp LALT  &kp LSHIFT  &kp LCTRL  &trans                                                           &kp K      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS      &trans
-&trans  &trans    &trans    &trans      &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans           &kp J      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &trans
-&trans  &trans    &trans    &trans      &trans             &trans  &trans  &trans  &trans  &none   &kp KP_NUMBER_0             &trans           &trans           &trans           &trans        &trans
+&trans  &trans    &trans    &trans      &trans                                                                                 &trans           &trans           &trans           &trans      &trans
+&trans  &trans    &trans    &trans      &trans     &trans                                                           &trans     &trans           &trans           &trans           &trans      &trans
+&trans  &trans    &trans    &trans      &trans     &trans                                                           &kp LS(G)  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp COMMA   &trans
+&trans  &kp LGUI  &kp LALT  &kp LSHIFT  &kp LCTRL  &trans                                                           &kp K      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS    &trans
+&trans  &trans    &trans    &trans      &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans           &kp J      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT  &trans
+&trans  &trans    &trans    &trans      &trans             &trans  &trans  &trans  &trans  &none   &kp KP_NUMBER_0             &trans           &trans           &trans           &trans      &trans
             >;
         };
 
