@@ -1,3 +1,6 @@
 [submodule "zmk-helpers"]
 	path = zmk-helpers
 	url = git@github.com:urob/zmk-helpers.git
+[submodule "zmk-auto-layer"]
+	path = zmk-auto-layer
+	url = https://github.com/urob/zmk-auto-layer
