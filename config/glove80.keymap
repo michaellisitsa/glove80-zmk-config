@@ -11,6 +11,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 #include "zmk-helpers/helper.h"
+#include <behaviors/num_word.dtsi>
 
 #define HYPER LC(LS(LG(LALT)))
 
