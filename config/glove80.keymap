@@ -4,18 +4,18 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include "zmk-helpers/helper.h"
+#include <behaviors/num_word.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
-#include "zmk-helpers/helper.h"
-#include <behaviors/num_word.dtsi>
-
 #define HYPER LC(LS(LG(LALT)))
 
 // layers
+
 #define DEFAULT 0
 #define LOWER 1
 #define MAGIC 2
@@ -266,12 +266,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | ESC   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1      &kp F2           &kp F3       &kp F4             &kp F5                                                                                                      &kp F6        &kp F7              &kp F8       &kp F9                       &kp F10
-&kp EQUAL   &kp N1           &kp N2       &kp N3             &kp N4        &kp N5                                                                                &kp N6  &kp N7        &kp N8              &kp N9       &kp N0                       &kp MINUS
-&none       &kp Q            &kp W        &kp E              &kp R         &kp T                                                                                 &kp Y   &kp U         &kp I               &kp O        &kp P                        &none
-&none       &hml LEFT_GUI A  &hml LALT S  &hml LEFT_SHIFT D  &hml LCTRL F  &kp G                                                                                 &kp H   &hmr RCTRL J  &hmr RIGHT_SHIFT K  &hmr RALT L  &hmr RIGHT_GUI LEFT_BRACKET  &none
-&num_word 5       &kp Z            &kp X        &kp C              &kp V         &kp B   &kp LSHFT       &kp LGUI        &layer_td  &kp DELETE  &kp RGUI  &kp RSHFT    &kp N   &kp M         &kp COMMA           &kp DOT      &kp RIGHT_BRACKET            &none
-&magic 2 0  &kp HOME         &kp END      &kp LEFT           &kp RIGHT             &magic_num 5 5  &shift_nav 6 0  &kp LALT   &kp RALT    &kp RET   &lt 4 SPACE          &kp UP        &kp DOWN            &kp LBKT     &kp RBKT                     &kp PG_DN
+&kp F1       &kp F2           &kp F3       &kp F4             &kp F5                                                                                                      &kp F6        &kp F7              &kp F8       &kp F9                       &kp F10
+&kp EQUAL    &kp N1           &kp N2       &kp N3             &kp N4        &kp N5                                                                                &kp N6  &kp N7        &kp N8              &kp N9       &kp N0                       &kp MINUS
+&none        &kp Q            &kp W        &kp E              &kp R         &kp T                                                                                 &kp Y   &kp U         &kp I               &kp O        &kp P                        &none
+&none        &hml LEFT_GUI A  &hml LALT S  &hml LEFT_SHIFT D  &hml LCTRL F  &kp G                                                                                 &kp H   &hmr RCTRL J  &hmr RIGHT_SHIFT K  &hmr RALT L  &hmr RIGHT_GUI LEFT_BRACKET  &none
+&num_word 5  &kp Z            &kp X        &kp C              &kp V         &kp B   &kp LSHFT       &kp LGUI        &layer_td  &kp DELETE  &kp RGUI  &kp RSHFT    &kp N   &kp M         &kp COMMA           &kp DOT      &kp RIGHT_BRACKET            &none
+&magic 2 0   &kp HOME         &kp END      &kp LEFT           &kp RIGHT             &magic_num 5 5  &shift_nav 6 0  &kp LALT   &kp RALT    &kp RET   &lt 4 SPACE          &kp UP        &kp DOWN            &kp LBKT     &kp RBKT                     &kp PG_DN
             >;
         };
 
@@ -321,12 +321,12 @@
 
         number_layer {
             bindings = <
-&trans  &trans    &trans    &trans      &trans                                                                                 &trans           &trans           &trans           &trans      &trans
-&trans  &trans    &trans    &trans      &trans     &trans                                                           &trans     &trans           &trans           &trans           &trans      &trans
-&trans  &trans    &trans    &trans      &trans     &trans                                                           &kp LS(G)  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp COMMA   &trans
-&trans  &kp LGUI  &kp LALT  &kp LSHIFT  &kp LCTRL  &trans                                                           &kp K      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS    &trans
-&trans  &trans    &trans    &trans      &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans           &kp J      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT  &trans
-&trans  &trans    &trans    &trans      &trans             &trans  &trans  &trans  &trans  &none   &kp KP_NUMBER_0             &trans           &trans           &trans           &trans      &trans
+&trans  &trans    &trans    &trans      &trans                                                                                 &trans           &trans           &trans           &trans  &trans
+&trans  &trans    &trans    &trans      &trans     &trans                                                           &trans     &trans           &trans           &trans           &trans  &trans
+&trans  &trans    &trans    &trans      &trans     &trans                                                           &kp LS(G)  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans
+&trans  &kp LGUI  &kp LALT  &kp LSHIFT  &kp LCTRL  &trans                                                           &kp K      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
+&trans  &trans    &trans    &trans      &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans           &kp J      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
+&trans  &trans    &trans    &trans      &trans             &trans  &trans  &trans  &trans  &trans  &kp KP_NUMBER_0             &trans           &trans           &trans           &trans  &trans
             >;
         };
 
