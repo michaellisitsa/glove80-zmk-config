@@ -251,6 +251,12 @@
             bindings = <&to 6>;
             key-positions = <38 37>;
         };
+
+        Tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <36 35>;
+            layers = <4>;
+        };
     };
 
     keymap {
