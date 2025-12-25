@@ -239,7 +239,41 @@
 
     combos {
         compatible = "zmk,combos";
+        // [a|s|d|f| | |j|k|l|:]
+        // [z|x|c|v| | |m|,|.|%]
 
+        // [x|x|-|-| | |-|-|-|-] = Tilde
+        // [-|-|-|-| | |-|-|-|-]
+        Tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <36 35>;
+            layers = <4>;
+        };
+
+        // [_|x|x|-| | |-|-|-|-] = Sticky Number
+        // [_|x|x|-| | |-|-|-|-] = Hold Number
+        StickyNumLayer {
+            bindings = <&sl 5>;
+            key-positions = <37 36>;
+        };
+        HoldNumLayer {
+            bindings = <&mo 5>;
+            key-positions = <49 48>;
+        };
+
+        // [_|_|x|x| | |-|-|-|-] = Magic Shift
+        // [_|-|x|x| | |-|-|-|-] = Hold Nav
+        MagicShiftCombo {
+            bindings = <&magic_shift>;
+            key-positions = <37 38>;
+        };
+        MomNavCombo {
+            bindings = <&mo 6>;
+            key-positions = <49 50>;
+        };
+
+        // [_|_|-|-| | |x|x|-|-] = Escape
+        // [-|-|-|-| | |-|-|-|-]
         EscapeCombo {
             bindings = <&kp ESCAPE>;
             key-positions = <41 42>;
@@ -247,36 +281,14 @@
             layers = <0>;
         };
 
-        StickyNumLayer {
-            bindings = <&sl 5>;
-            key-positions = <37 36>;
-        };
 
-        Tilde {
-            bindings = <&kp TILDE>;
-            key-positions = <36 35>;
-            layers = <4>;
-        };
-
+        // [_|_|-|-| | |_|x|x|-] = Tab
+        // [-|-|-|-| | |-|-|-|-]
         TabCombo {
             bindings = <&kp TAB>;
             key-positions = <43 42>;
         };
 
-        HoldNumLayer {
-            bindings = <&mo 5>;
-            key-positions = <49 48>;
-        };
-
-        MagicShiftCombo {
-            bindings = <&magic_shift>;
-            key-positions = <37 38>;
-        };
-
-        MomNavCombo {
-            bindings = <&mo 6>;
-            key-positions = <49 50>;
-        };
     };
 
     keymap {
