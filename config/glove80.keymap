@@ -239,11 +239,12 @@
 
     combos {
         compatible = "zmk,combos";
+
         // [a|s|d|f| | |j|k|l|:]
         // [z|x|c|v| | |m|,|.|%]
-
         // [x|x|-|-| | |-|-|-|-] = Tilde
         // [-|-|-|-| | |-|-|-|-]
+
         Tilde {
             bindings = <&kp TILDE>;
             key-positions = <36 35>;
@@ -252,10 +253,12 @@
 
         // [_|x|x|-| | |-|-|-|-] = Sticky Number
         // [_|x|x|-| | |-|-|-|-] = Hold Number
+
         StickyNumLayer {
             bindings = <&sl 5>;
             key-positions = <37 36>;
         };
+
         HoldNumLayer {
             bindings = <&mo 5>;
             key-positions = <49 48>;
@@ -263,10 +266,12 @@
 
         // [_|_|x|x| | |-|-|-|-] = Magic Shift
         // [_|-|x|x| | |-|-|-|-] = Hold Nav
+
         MagicShiftCombo {
             bindings = <&magic_shift>;
             key-positions = <37 38>;
         };
+
         MomNavCombo {
             bindings = <&mo 6>;
             key-positions = <49 50>;
@@ -274,6 +279,7 @@
 
         // [_|_|-|-| | |x|x|-|-] = Escape
         // [-|-|-|-| | |-|-|-|-]
+
         EscapeCombo {
             bindings = <&kp ESCAPE>;
             key-positions = <41 42>;
@@ -281,14 +287,13 @@
             layers = <0>;
         };
 
-
         // [_|_|-|-| | |_|x|x|-] = Tab
         // [-|-|-|-| | |-|-|-|-]
+
         TabCombo {
             bindings = <&kp TAB>;
             key-positions = <43 42>;
         };
-
     };
 
     keymap {
@@ -307,8 +312,8 @@
 &kp F1      &kp F2           &kp F3       &kp F4             &kp F5                                                                                                      &kp F6        &kp F7              &kp F8       &kp F9                &kp F10
 &kp EQUAL   &kp N1           &kp N2       &kp N3             &kp N4        &kp N5                                                                                &kp N6  &kp N7        &kp N8              &kp N9       &kp N0                &kp MINUS
 &none       &kp Q            &kp W        &kp E              &kp R         &kp T                                                                                 &kp Y   &kp U         &kp I               &kp O        &kp P                 &none
-&none       &hml LEFT_GUI A  &hml LALT S  &hml LEFT_SHIFT D  &hml LCTRL F  &kp G                                                                                 &kp H   &hmr RCTRL J  &hmr RIGHT_SHIFT K  &hmr RALT L  &hmr RIGHT_GUI COLON  &none
-&none       &kp Z            &kp X        &kp C              &kp V         &kp B   &kp LSHFT       &kp LGUI        &layer_td  &kp DELETE  &kp RGUI  &kp RSHFT    &kp N   &kp M         &kp COMMA           &kp DOT      &kp BACKSPACE         &none
+&none       &hml LEFT_GUI A  &hml LALT S  &hml LEFT_SHIFT D  &hml LCTRL F  &kp G                                                                                 &kp H   &hmr RCTRL J  &hmr RIGHT_SHIFT K  &hmr RALT L  &hmr RIGHT_GUI COMMA  &none
+&none       &kp Z            &kp X        &kp C              &kp V         &kp B   &kp LSHFT       &kp LGUI        &layer_td  &kp DELETE  &kp RGUI  &kp RSHFT    &kp N   &kp M         &kp SPACE           &kp DOT      &kp BACKSPACE         &none
 &magic 2 0  &kp HOME         &kp END      &kp LEFT           &kp RIGHT             &magic_num 5 5  &shift_nav 6 0  &kp LALT   &kp RALT    &kp RET   &lt 4 SPACE          &kp UP        &kp DOWN            &kp LBKT     &kp RBKT              &kp PG_DN
             >;
         };
